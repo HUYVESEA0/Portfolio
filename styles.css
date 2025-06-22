@@ -1818,3 +1818,97 @@ footer p {
         font-size: var(--font-size-base);
     }
 }
+
+/* Performance Optimizations */
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Smooth scrolling cho tất cả browsers */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fix cho Safari */
+@supports (-webkit-appearance: none) {
+    .glass-morphism,
+    .skill-item,
+    .project-card,
+    .contact-item,
+    .blog-card,
+    .testimonial-card {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+}
+
+/* Fix cho Firefox */
+@-moz-document url-prefix() {
+    .glass-morphism,
+    .skill-item,
+    .project-card,
+    .contact-item,
+    .blog-card,
+    .testimonial-card {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+/* Font loading optimization - handled by Google Fonts CDN */
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .loading-screen {
+        display: none !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .back-to-top,
+    .scroll-progress,
+    .loading-screen {
+        display: none !important;
+    }
+    
+    * {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Fallback cho browsers không support backdrop-filter */
+.no-backdrop-filter .glass-morphism,
+.no-backdrop-filter .skill-item,
+.no-backdrop-filter .project-card,
+.no-backdrop-filter .contact-item,
+.no-backdrop-filter .blog-card,
+.no-backdrop-filter .testimonial-card,
+.no-backdrop-filter .navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(139, 92, 246, 0.3) !important;
+}
+
+.no-backdrop-filter[data-theme="dark"] .glass-morphism,
+.no-backdrop-filter[data-theme="dark"] .skill-item,
+.no-backdrop-filter[data-theme="dark"] .project-card,
+.no-backdrop-filter[data-theme="dark"] .contact-item,
+.no-backdrop-filter[data-theme="dark"] .blog-card,
+.no-backdrop-filter[data-theme="dark"] .testimonial-card,
+.no-backdrop-filter[data-theme="dark"] .navbar {
+    background: rgba(31, 41, 55, 0.95) !important;
+    border: 1px solid rgba(139, 92, 246, 0.3) !important;
+}

@@ -256,6 +256,8 @@ function initializeAnimations() {
     initContactForm();
     initActiveNavHighlight();
     initPhase4Features(); // Add Phase 4 features
+    initErrorHandling(); // Add error handling
+    initPerformanceMonitoring(); // Add performance monitoring
 }
 
 // ========================================
@@ -458,17 +460,72 @@ function initPhase4Features() {
     initLazyLoading();
 }
 
-// Update main initialization function
+// Error Handling & Graceful Degradation
+function initErrorHandling() {
+    // Handle JavaScript errors gracefully
+    window.addEventListener('error', function(e) {
+        console.warn('Portfolio: Non-critical error caught:', e.error);
+        // Don't break the user experience for non-critical errors
+        return true;
+    });
+    
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', function(e) {
+        console.warn('Portfolio: Promise rejection handled:', e.reason);
+        e.preventDefault();
+    });
+    
+    // Fallback for browsers without IntersectionObserver
+    if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
+            el.classList.add('visible');
+        });
+    }
+    
+    // Fallback for browsers without CSS backdrop-filter
+    if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
+        document.documentElement.classList.add('no-backdrop-filter');
+    }
+}
+
+// Performance monitoring
+function initPerformanceMonitoring() {
+    // Monitor loading performance
+    window.addEventListener('load', function() {
+        if ('performance' in window) {
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            console.log(`Portfolio loaded in ${loadTime}ms`);
+            
+            // If loading is slow, show feedback
+            if (loadTime > 3000) {
+                console.warn('Portfolio: Slow loading detected');
+            }
+        }
+    });
+}
+
+// Safe initialization wrapper
+function safeInit(fn, name) {
+    try {
+        fn();
+    } catch (error) {
+        console.warn(`Portfolio: Failed to initialize ${name}:`, error);
+    }
+}
+
+// Update main initialization to use safe wrappers
 function initializeAnimations() {
-    initTypingAnimation();
-    initScrollAnimations();
-    initBackToTopButton();
-    initSmoothScrolling();
-    initEnhancedNavbar();
-    initParallaxEffect();
-    initContactForm();
-    initActiveNavHighlight();
-    initPhase4Features(); // Add Phase 4 features
+    safeInit(initTypingAnimation, 'typing animation');
+    safeInit(initScrollAnimations, 'scroll animations');
+    safeInit(initBackToTopButton, 'back to top button');
+    safeInit(initSmoothScrolling, 'smooth scrolling');
+    safeInit(initEnhancedNavbar, 'enhanced navbar');
+    safeInit(initParallaxEffect, 'parallax effect');
+    safeInit(initContactForm, 'contact form');
+    safeInit(initActiveNavHighlight, 'active nav highlight');
+    safeInit(initPhase4Features, 'Phase 4 features');
+    safeInit(initErrorHandling, 'error handling');
+    safeInit(initPerformanceMonitoring, 'performance monitoring');
 }
 
 // ========================================
