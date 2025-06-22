@@ -1,0 +1,43 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Personal portfolio website built with HTML, CSS, and JavaScript",
+  "main": "index.html",  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "dev": "live-server --port=3000 --watch=. --open=/index.html",
+    "build": "echo 'Building project...' && npm run minify:css && npm run minify:js",
+    "minify:css": "cleancss -o dist/styles.min.css styles.css",
+    "minify:js": "uglifyjs script.js -o dist/script.min.js",
+    "serve": "python -m http.server 8000",
+    "predeploy": "git add . && git commit -m 'Deploy to GitHub Pages' || true",
+    "deploy": "git push origin main && echo 'Deployed to GitHub Pages!'",
+    "lint": "echo 'Linting HTML, CSS, and JS files...'",
+    "format": "prettier --write *.html *.css *.js"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "personal",
+    "html",
+    "css",
+    "javascript",
+    "responsive",
+    "modern"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "prettier": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/portfolio/issues"
+  },
+  "homepage": "https://yourusername.github.io/portfolio"
+}
