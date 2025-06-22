@@ -62,7 +62,7 @@
 <div align="center">
   
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=HUYVESEA0&repo=portfolio-website&theme=tokyonight)](https://github.com/HUYVESEA0/portfolio-website)
-[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=HUYVESEA0&repo=awesome-project&theme=tokyonight)](https://github.com/HUYVESEA0/awesome-project)
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=HUYVESEA0&repo=Portfolio&theme=tokyonight)](https://github.com/HUYVESEA0/Portfolio)
 
 </div>
 
@@ -71,6 +71,7 @@
 - 🌱 Learning the fundamentals of web development
 - 👯 Looking to connect with other learners and mentors
 - 💬 Ask me about my learning journey and beginner-friendly resources
+- 🌐 **Portfolio Website**: [Live Demo](https://huyvesea0.github.io/portfolio-website) | [Source Code](https://github.com/HUYVESEA0/portfolio-website)
 
 ## 💼 Experience & Skills
 
