@@ -1,0 +1,29 @@
+name: Waka Readme
+
+on:
+  schedule:
+    # Runs every 4 hours
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: WakaReadme DevMetrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          REPOSITORY: HUYVESEA0/Portfolio
+          COMMIT_MESSAGE: "📊 Updated development metrics"
+          SHOW_TITLE: true
+          SHOW_TIME: true
+          SHOW_MASKED_TIME: true
+          TIME_RANGE: "last_7_days"
+          SHOW_TIMEZONE: false
+          SHOW_EDITORS: true
+          SHOW_LANGUAGE: true
+          SHOW_OS: true
+          SHOW_PROJECTS: false
+          SHOW_LOC_CHART: false
