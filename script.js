@@ -255,6 +255,220 @@ function initializeAnimations() {
     initParallaxEffect();
     initContactForm();
     initActiveNavHighlight();
+    initPhase4Features(); // Add Phase 4 features
+}
+
+// ========================================
+// PHASE 4: PREMIUM FEATURES & DARK MODE
+// ========================================
+
+// Dark Mode Toggle
+function initDarkMode() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to light mode
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    html.setAttribute('data-theme', savedTheme);
+    
+    // Update icon based on theme
+    updateThemeIcon(savedTheme);
+    
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+        
+        // Add a subtle animation
+        themeToggle.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+            themeToggle.style.transform = '';
+        }, 300);
+    });
+}
+
+function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.innerHTML = theme === 'dark' 
+        ? '<i class="fas fa-sun"></i>' 
+        : '<i class="fas fa-moon"></i>';
+}
+
+// Scroll Progress Indicator
+function initScrollProgress() {
+    const progressBar = document.getElementById('scroll-progress-bar');
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        
+        progressBar.style.width = scrollPercent + '%';
+    });
+}
+
+// Testimonials Slider
+function initTestimonialsSlider() {
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.dot');
+    let currentTestimonial = 0;
+    let testimonialInterval;
+    
+    function showTestimonial(index) {
+        // Hide all testimonials
+        testimonials.forEach(testimonial => {
+            testimonial.classList.remove('active');
+        });
+        
+        // Hide all dots
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Show current testimonial and dot
+        if (testimonials[index]) {
+            testimonials[index].classList.add('active');
+        }
+        if (dots[index]) {
+            dots[index].classList.add('active');
+        }
+    }
+    
+    function nextTestimonial() {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }
+    
+    function startSlider() {
+        testimonialInterval = setInterval(nextTestimonial, 5000);
+    }
+    
+    function stopSlider() {
+        clearInterval(testimonialInterval);
+    }
+    
+    // Add click handlers to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentTestimonial = index;
+            showTestimonial(currentTestimonial);
+            stopSlider();
+            startSlider(); // Restart timer
+        });
+    });
+    
+    // Pause on hover
+    const sliderContainer = document.querySelector('.testimonials-slider');
+    if (sliderContainer) {
+        sliderContainer.addEventListener('mouseenter', stopSlider);
+        sliderContainer.addEventListener('mouseleave', startSlider);
+    }
+    
+    // Start the slider
+    startSlider();
+}
+
+// Copy Email Functionality
+function initCopyEmail() {
+    const emailItems = document.querySelectorAll('.contact-item[data-copy]');
+    
+    emailItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = item.getAttribute('data-copy');
+            
+            navigator.clipboard.writeText(email).then(() => {
+                // Show feedback
+                const originalText = item.innerHTML;
+                item.innerHTML = '<i class="fas fa-check"></i> Đã sao chép!';
+                item.style.background = 'var(--success-color)';
+                
+                setTimeout(() => {
+                    item.innerHTML = originalText;
+                    item.style.background = '';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = email;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                // Show feedback
+                const originalText = item.innerHTML;
+                item.innerHTML = '<i class="fas fa-check"></i> Đã sao chép!';
+                item.style.background = 'var(--success-color)';
+                
+                setTimeout(() => {
+                    item.innerHTML = originalText;
+                    item.style.background = '';
+                }, 2000);
+            });
+        });
+    });
+}
+
+// Enhanced Blog Card Interactions
+function initBlogInteractions() {
+    const blogCards = document.querySelectorAll('.blog-card');
+    
+    blogCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
+// Lazy Loading for Images
+function initLazyLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    }
+}
+
+// Initialize Phase 4 Features
+function initPhase4Features() {
+    initDarkMode();
+    initScrollProgress();
+    initTestimonialsSlider();
+    initCopyEmail();
+    initBlogInteractions();
+    initLazyLoading();
+}
+
+// Update main initialization function
+function initializeAnimations() {
+    initTypingAnimation();
+    initScrollAnimations();
+    initBackToTopButton();
+    initSmoothScrolling();
+    initEnhancedNavbar();
+    initParallaxEffect();
+    initContactForm();
+    initActiveNavHighlight();
+    initPhase4Features(); // Add Phase 4 features
 }
 
 // ========================================

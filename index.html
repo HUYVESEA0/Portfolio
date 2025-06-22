@@ -3,10 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - HUYVESEA0</title>
+    <title>Portfolio - HUYVESEA0 | Aspiring Web Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web. Khám phá các dự án HTML, CSS, JavaScript và hành trình học tập của tôi.">
+    <meta name="keywords" content="portfolio, web developer, HTML, CSS, JavaScript, Git, frontend, HUYVESEA0">
+    <meta name="author" content="HUYVESEA0">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - HUYVESEA0 | Aspiring Web Developer">
+    <meta property="og:description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web. Khám phá các dự án và hành trình học tập của tôi.">
+    <meta property="og:image" content="https://huyvesea0.github.io/Portfolio/og-image.jpg">
+    <meta property="og:url" content="https://huyvesea0.github.io/Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="HUYVESEA0 Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio - HUYVESEA0 | Aspiring Web Developer">
+    <meta name="twitter:description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web.">
+    <meta name="twitter:image" content="https://huyvesea0.github.io/Portfolio/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "HUYVESEA0",
+        "jobTitle": "Aspiring Web Developer",
+        "email": "hsmdc0065@tmt.edu.vn",
+        "url": "https://huyvesea0.github.io/Portfolio",
+        "sameAs": [
+            "https://github.com/HUYVESEA0"
+        ],
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Git", "Web Development"],
+        "description": "Một developer đầy nhiệt huyết đang học lập trình web và phát triển kỹ năng frontend."
+    }
+    </script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -20,12 +63,15 @@
             </div>
             <div class="loading-text">Đang tải portfolio...</div>
         </div>
-    </div>
-
-    <!-- Back to Top Button -->
+    </div>    <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="Lên đầu trang">
         <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="scroll-progress-bar"></div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -39,12 +85,19 @@
                 </li>
                 <li class="nav-item">
                     <a href="#skills" class="nav-link">Kỹ năng</a>
-                </li>
-                <li class="nav-item">
+                </li>                <li class="nav-item">
                     <a href="#projects" class="nav-link">Dự án</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
                     <a href="#contact" class="nav-link">Liên hệ</a>
+                </li>                <li class="nav-item">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
                 </li>
             </ul>
             <div class="hamburger">
@@ -295,6 +348,177 @@
                     </div>
                 </div>
             </div>
+        </div>    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">Blog & Chia sẻ</h2>
+            <p class="section-subtitle">Những bài viết về hành trình học lập trình và kinh nghiệm của tôi</p>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=250&fit=crop&crop=center" alt="JavaScript Learning" loading="lazy">
+                        <div class="blog-category">JavaScript</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                15 Tháng 6, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fas fa-clock"></i>
+                                5 phút đọc
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Hành trình học JavaScript của một newbie</h3>
+                        <p class="blog-excerpt">
+                            Chia sẻ về những khó khăn, thử thách và những điều thú vị khi bắt đầu học JavaScript...
+                        </p>
+                        <a href="#" class="blog-link">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center" alt="CSS Grid" loading="lazy">
+                        <div class="blog-category">CSS</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                10 Tháng 6, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fas fa-clock"></i>
+                                8 phút đọc
+                            </span>
+                        </div>
+                        <h3 class="blog-title">CSS Grid vs Flexbox: Khi nào dùng cái gì?</h3>
+                        <p class="blog-excerpt">
+                            So sánh chi tiết giữa CSS Grid và Flexbox, cùng với những ví dụ thực tế...
+                        </p>
+                        <a href="#" class="blog-link">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop&crop=center" alt="Git Github" loading="lazy">
+                        <div class="blog-category">Git</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                5 Tháng 6, 2025
+                            </span>
+                            <span class="blog-read-time">
+                                <i class="fas fa-clock"></i>
+                                6 phút đọc
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Git & GitHub cho người mới bắt đầu</h3>
+                        <p class="blog-excerpt">
+                            Hướng dẫn từ A-Z về Git và GitHub, từ những câu lệnh cơ bản đến workflow...
+                        </p>
+                        <a href="#" class="blog-link">Đọc thêm <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog-cta">
+                <p>Bạn muốn đọc thêm bài viết?</p>
+                <a href="#" class="btn btn-primary">Xem tất cả bài viết</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Nhận xét từ mọi người</h2>
+            <p class="section-subtitle">Những phản hồi từ bạn bè và đồng nghiệp về kỹ năng và thái độ làm việc của tôi</p>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "HUYVESEA0 là một người học rất chăm chỉ và có tinh thần trách nhiệm cao. 
+                            Luôn sẵn sàng học hỏi và chia sẻ kiến thức với mọi người."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Nguyễn Văn A" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">Nguyễn Văn A</h4>
+                                <p class="author-title">Bạn cùng lớp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Thái độ học tập tích cực và luôn đặt câu hỏi sâu sắc. 
+                            Tôi tin rằng bạn ấy sẽ trở thành một developer giỏi trong tương lai."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612e5e1?w=60&h=60&fit=crop&crop=face" alt="Trần Thị B" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">Trần Thị B</h4>
+                                <p class="author-title">Giảng viên</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Rất ấn tượng với portfolio và các project. 
+                            Có thể thấy được sự tiến bộ và đam mê với lập trình."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Lê Văn C" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">Lê Văn C</h4>
+                                <p class="author-title">Developer bạn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
         </div>
     </section>
 
@@ -305,8 +529,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Hãy kết nối cùng nhau!</h3>
-                    <p>Tôi luôn mở rộng tay đón nhận những cơ hội mới và dự án thú vị. Hãy liên hệ với tôi!</p>                    <div class="contact-items">
-                        <div class="contact-item">
+                    <p>Tôi luôn mở rộng tay đón nhận những cơ hội mới và dự án thú vị. Hãy liên hệ với tôi!</p>                    <div class="contact-items">                        <div class="contact-item" data-copy="hsmdc0065@tmt.edu.vn" title="Click để sao chép email">
                             <i class="fas fa-envelope"></i>
                             <span>hsmdc0065@tmt.edu.vn</span>
                         </div>
