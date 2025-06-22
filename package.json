@@ -23,8 +23,7 @@
     "javascript",
     "responsive",
     "modern"
-  ],
-  "author": "Your Name",
+  ],  "author": "HUYVESEA0",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.2",
@@ -34,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/portfolio.git"
+    "url": "https://github.com/HUYVESEA0/Portfolio.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/portfolio/issues"
+    "url": "https://github.com/HUYVESEA0/Portfolio/issues"
   },
-  "homepage": "https://yourusername.github.io/portfolio"
+  "homepage": "https://huyvesea0.github.io/Portfolio"
 }
