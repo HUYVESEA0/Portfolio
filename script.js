@@ -20,6 +20,7 @@ function initTypingAnimation() {
         'Future Full-Stack Developer',
         'Passionate Learner',
         'Code Explorer'
+        'Vibe Coding'
     ];
     
     let textIndex = 0;
