@@ -19,7 +19,7 @@ function initTypingAnimation() {
         'Web Development Enthusiast', 
         'Future Full-Stack Developer',
         'Passionate Learner',
-        'Code Explorer'
+        'Code Explorer',
         'Vibe Coding'
     ];
     
