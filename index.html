@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - HUYVESEA0 | Aspiring Web Developer</title>
+    <title>HUYVESEA0 | Developer Terminal</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web. Khám phá các dự án HTML, CSS, JavaScript và hành trình học tập của tôi.">
     <meta name="keywords" content="portfolio, web developer, HTML, CSS, JavaScript, Git, frontend, HUYVESEA0">
     <meta name="author" content="HUYVESEA0">
     <meta name="robots" content="index, follow">
-      <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Portfolio - HUYVESEA0 | Aspiring Web Developer">
-    <meta property="og:description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web. Khám phá các dự án và hành trình học tập của tôi.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HUYVESEA0 | Developer Terminal">
+    <meta property="og:description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web.">
     <meta property="og:image" content="https://huyvesea0.github.io/Portfolio/favicon.svg">
     <meta property="og:url" content="https://huyvesea0.github.io/Portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="HUYVESEA0 Portfolio">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portfolio - HUYVESEA0 | Aspiring Web Developer">
-    <meta name="twitter:description" content="Portfolio của HUYVESEA0 - một developer đầy nhiệt huyết đang học lập trình web.">
-    <meta name="twitter:image" content="https://huyvesea0.github.io/Portfolio/favicon.svg">
-      <!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="alternate icon" href="favicon.svg">
-      <!-- Stylesheets -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     
     <!-- Structured Data -->
@@ -42,90 +37,145 @@
         "jobTitle": "Aspiring Web Developer",
         "email": "hsmdc0065@tmt.edu.vn",
         "url": "https://huyvesea0.github.io/Portfolio",
-        "sameAs": [
-            "https://github.com/HUYVESEA0"
-        ],
-        "knowsAbout": ["HTML", "CSS", "JavaScript", "Git", "Web Development"],
-        "description": "Một developer đầy nhiệt huyết đang học lập trình web và phát triển kỹ năng frontend."
+        "sameAs": ["https://github.com/HUYVESEA0"],
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Git", "Web Development"]
     }
     </script>
 </head>
 <body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">HUYVESEA0</div>
-            <div class="loading-spinner">
-                <div class="spinner-ring"></div>
-                <div class="spinner-ring"></div>
-                <div class="spinner-ring"></div>
+        <div class="loading-terminal">
+            <div class="terminal-header">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">TERMINAL</span>
             </div>
-            <div class="loading-text">Đang tải portfolio...</div>
+            <div class="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-text typing-text">Initializing portfolio system...</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-text typing-text">Loading assets...</span>
+                </div>
+                <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-text typing-text">System ready!</span>
+                </div>
+            </div>
         </div>
-    </div>    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Lên đầu trang">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress">
-        <div class="progress-bar" id="scroll-progress-bar"></div>
     </div>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Portfolio</a>
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">&lt;HUYVESEA0/&gt;</span>
+            </a>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Trang chủ</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">Giới thiệu</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Kỹ năng</a>
-                </li>                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Dự án</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#blog" class="nav-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Liên hệ</a>
-                </li>                <li class="nav-item">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <li><a href="#home" class="nav-link"><span class="nav-icon">_</span>HOME</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-icon">_</span>ABOUT</a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-icon">_</span>SKILLS</a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-icon">_</span>PROJECTS</a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-icon">_</span>CONTACT</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
                     </button>
                 </li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">            <div class="hero-content">                
-                <h1 class="hero-title">Xin chào, tôi là <span class="highlight">HUYVESEA0</span></h1>
-                <p class="hero-subtitle">
-                    <span id="typed-text"></span><span class="cursor">|</span>
-                </p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="code-badge">
+                    <span class="code-badge-icon">&lt;/&gt;</span>
+                    <span>Developer Mode</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="HUYVESEA0">HUYVESEA0</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="terminal-prompt">$</span>
+                    <span id="typed-text" class="typed-text"></span>
+                    <span class="cursor">_</span>
+                </div>
                 <p class="hero-description">
-                    Tôi là một developer đang bắt đầu hành trình học lập trình. Hiện tại đang học HTML, CSS, JavaScript 
-                    và Git. Đam mê tạo ra những website hiện đại và luôn học hỏi những công nghệ mới. 
-                    Mục tiêu của tôi là trở thành một full-stack developer giỏi.
+                    <span class="code-tag">&lt;p&gt;</span>
+                    Tôi là một developer đang bắt đầu hành trình học lập trình. 
+                    Hiện tại đang học HTML, CSS, JavaScript và Git. 
+                    Đam mê tạo ra những website hiện đại và luôn học hỏi những công nghệ mới.
+                    <span class="code-tag">&lt;/p&gt;</span>
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Xem dự án</a>
-                    <a href="#contact" class="btn btn-secondary">Liên hệ</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <i class="fas fa-code"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-terminal"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">Months Learning</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">Languages</div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="hero-avatar">
-                    <img src="https://via.placeholder.com/300x300/4F46E5/ffffff?text=Avatar" alt="Profile Picture">
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-window-header">
+                        <span class="window-dot"></span>
+                        <span class="window-dot"></span>
+                        <span class="window-dot"></span>
+                        <span class="window-title">code.js</span>
+                    </div>
+                    <div class="code-window-body">
+                        <pre><code class="code-snippet">
+<span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+    <span class="code-property">name</span>: <span class="code-string">'HUYVESEA0'</span>,
+    <span class="code-property">role</span>: <span class="code-string">'Web Developer'</span>,
+    <span class="code-property">skills</span>: [<span class="code-string">'HTML'</span>, <span class="code-string">'CSS'</span>, <span class="code-string">'JS'</span>],
+    <span class="code-property">passion</span>: <span class="code-string">'Coding'</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-function">buildPortfolio</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">'Awesome!'</span>;
+}
+                        </code></pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,30 +184,41 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Giới thiệu về tôi</h2>
-            <div class="about-content">                <div class="about-text">
-                    <p>
-                        Tôi là một developer mới bắt đầu với niềm đam mê học hỏi và phát triển trong lĩnh vực công nghệ. 
-                        Hiện tại tôi đang tập trung vào việc xây dựng nền tảng vững chắc trong phát triển web với 
-                        HTML5, CSS3, JavaScript và Git. 
-                    </p>
-                    <p>
-                        Mỗi ngày tôi dành thời gian để code và học hỏi những kiến thức mới. Tôi tin rằng "mọi chuyên gia 
-                        đều từng là người mới bắt đầu" và tôi đang trên hành trình để trở thành một developer giỏi. 
-                        Tiếp theo tôi sẽ học React, Node.js và Python.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>6+</h3>
-                            <p>Tháng học lập trình</p>
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="terminal-box">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-title">about.txt</span>
                         </div>
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Dự án đã hoàn thành</p>
-                        </div>
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Ngôn ngữ đang học</p>
+                        <div class="terminal-body">
+                            <p class="terminal-line">
+                                <span class="terminal-prompt">$</span> 
+                                <span class="terminal-command">cat about.txt</span>
+                            </p>
+                            <p class="terminal-line">
+                                Tôi là một developer mới bắt đầu với niềm đam mê học hỏi 
+                                và phát triển trong lĩnh vực công nghệ.
+                            </p>
+                            <p class="terminal-line">
+                                Hiện tại tôi đang tập trung vào việc xây dựng nền tảng 
+                                vững chắc trong phát triển web với HTML5, CSS3, JavaScript và Git.
+                            </p>
+                            <p class="terminal-line">
+                                Mỗi ngày tôi dành thời gian để code và học hỏi những kiến thức mới. 
+                                Tôi tin rằng "mọi chuyên gia đều từng là người mới bắt đầu".
+                            </p>
+                            <p class="terminal-line">
+                                <span class="terminal-prompt">$</span> 
+                                <span class="terminal-cursor">_</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -168,108 +229,82 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Kỹ năng của tôi</h2>            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Currently Learning</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-progress="75">
-                            <div class="skill-info">
-                                <i class="fab fa-html5"></i>
-                                <span>HTML5</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="75"></div>
-                            </div>
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
                         </div>
-                        <div class="skill-item" data-progress="70">
-                            <div class="skill-info">
-                                <i class="fab fa-css3-alt"></i>
-                                <span>CSS3</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-progress="60">
-                            <div class="skill-info">
-                                <i class="fab fa-js-square"></i>
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="60"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-progress="65">
-                            <div class="skill-info">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="65"></div>
-                            </div>
-                        </div>
+                        <span class="skill-percent">75%</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Next to Learn</h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-progress="20">
-                            <div class="skill-info">
-                                <i class="fab fa-react"></i>
-                                <span>React</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="20"></div>
-                            </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="70"></div>
                         </div>
-                        <div class="skill-item" data-progress="15">
-                            <div class="skill-info">
-                                <i class="fab fa-node-js"></i>
-                                <span>Node.js</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="15"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-progress="25">
-                            <div class="skill-info">
-                                <i class="fab fa-python"></i>
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="25"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-progress="10">
-                            <div class="skill-info">
-                                <i class="fas fa-code"></i>
-                                <span>TypeScript</span>
-                            </div>
-                            <div class="skill-progress">
-                                <div class="progress-bar" data-width="10"></div>
-                            </div>
-                        </div>
+                        <span class="skill-percent">70%</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Environment</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>VS Code</span>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="60"></div>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="65"></div>
                         </div>
-                        <div class="skill-item">
-                            <i class="fab fa-windows"></i>
-                            <span>Windows</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="20"></div>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-tools"></i>
-                            <span>Chrome DevTools</span>
+                        <span class="skill-percent">20%</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="15"></div>
                         </div>
+                        <span class="skill-percent">15%</span>
                     </div>
                 </div>
             </div>
@@ -279,18 +314,25 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Dự án của tôi</h2>            <div class="projects-grid">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/4F46E5/ffffff?text=Portfolio+Website" alt="Portfolio Website">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://huyvesea0.github.io/Portfolio" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/HUYVESEA0/Portfolio" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+                            <a href="https://huyvesea0.github.io/Portfolio" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/HUYVESEA0/Portfolio" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-content">
+                        <div class="project-badge">Portfolio</div>
                         <h3>Portfolio Website</h3>
                         <p>Website portfolio cá nhân được xây dựng với HTML, CSS, và JavaScript thuần. Responsive design và hiệu ứng animations đẹp mắt.</p>
                         <div class="project-tech">
@@ -301,18 +343,19 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/10B981/ffffff?text=Learning+Project" alt="Learning Project">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/HUYVESEA0" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/HUYVESEA0" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-content">
+                        <div class="project-badge">Learning</div>
                         <h3>Web Development Practice</h3>
                         <p>Các bài tập và dự án nhỏ trong quá trình học HTML, CSS, JavaScript. Tập trung vào responsive design và interactivity.</p>
                         <div class="project-tech">
@@ -323,19 +366,20 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/400x250/F59E0B/ffffff?text=Coming+Soon" alt="Future Project">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/HUYVESEA0" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/HUYVESEA0" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>React App (Upcoming)</h3>
+                        <div class="project-badge">Coming Soon</div>
+                        <h3>React App</h3>
                         <p>Dự án React đầu tiên đang trong kế hoạch. Sẽ là một ứng dụng web tương tác với modern UI/UX.</p>
                         <div class="project-tech">
                             <span>React</span>
@@ -346,244 +390,114 @@
                     </div>
                 </div>
             </div>
-        </div>    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">Blog & Chia sẻ</h2>
-            <p class="section-subtitle">Những bài viết về hành trình học lập trình và kinh nghiệm của tôi</p>
-            
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=250&fit=crop&crop=center" alt="JavaScript Learning" loading="lazy">
-                        <div class="blog-category">JavaScript</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                15 Tháng 6, 2025
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                5 phút đọc
-                            </span>
-                        </div>
-                        <h3 class="blog-title">Hành trình học JavaScript của một newbie</h3>
-                        <p class="blog-excerpt">
-                            Chia sẻ về những khó khăn, thử thách và những điều thú vị khi bắt đầu học JavaScript...
-                        </p>
-                        <a href="#" class="blog-link">Đọc thêm <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center" alt="CSS Grid" loading="lazy">
-                        <div class="blog-category">CSS</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                10 Tháng 6, 2025
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                8 phút đọc
-                            </span>
-                        </div>
-                        <h3 class="blog-title">CSS Grid vs Flexbox: Khi nào dùng cái gì?</h3>
-                        <p class="blog-excerpt">
-                            So sánh chi tiết giữa CSS Grid và Flexbox, cùng với những ví dụ thực tế...
-                        </p>
-                        <a href="#" class="blog-link">Đọc thêm <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop&crop=center" alt="Git Github" loading="lazy">
-                        <div class="blog-category">Git</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                5 Tháng 6, 2025
-                            </span>
-                            <span class="blog-read-time">
-                                <i class="fas fa-clock"></i>
-                                6 phút đọc
-                            </span>
-                        </div>
-                        <h3 class="blog-title">Git & GitHub cho người mới bắt đầu</h3>
-                        <p class="blog-excerpt">
-                            Hướng dẫn từ A-Z về Git và GitHub, từ những câu lệnh cơ bản đến workflow...
-                        </p>
-                        <a href="#" class="blog-link">Đọc thêm <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="blog-cta">
-                <p>Bạn muốn đọc thêm bài viết?</p>
-                <a href="#" class="btn btn-primary">Xem tất cả bài viết</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Nhận xét từ mọi người</h2>
-            <p class="section-subtitle">Những phản hồi từ bạn bè và đồng nghiệp về kỹ năng và thái độ làm việc của tôi</p>
-            
-            <div class="testimonials-slider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "HUYVESEA0 là một người học rất chăm chỉ và có tinh thần trách nhiệm cao. 
-                            Luôn sẵn sàng học hỏi và chia sẻ kiến thức với mọi người."
-                        </p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" alt="Nguyễn Văn A" class="author-avatar">
-                            <div class="author-info">
-                                <h4 class="author-name">Nguyễn Văn A</h4>
-                                <p class="author-title">Bạn cùng lớp</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Thái độ học tập tích cực và luôn đặt câu hỏi sâu sắc. 
-                            Tôi tin rằng bạn ấy sẽ trở thành một developer giỏi trong tương lai."
-                        </p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612e5e1?w=60&h=60&fit=crop&crop=face" alt="Trần Thị B" class="author-avatar">
-                            <div class="author-info">
-                                <h4 class="author-name">Trần Thị B</h4>
-                                <p class="author-title">Giảng viên</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">
-                            "Rất ấn tượng với portfolio và các project. 
-                            Có thể thấy được sự tiến bộ và đam mê với lập trình."
-                        </p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Lê Văn C" class="author-avatar">
-                            <div class="author-info">
-                                <h4 class="author-name">Lê Văn C</h4>
-                                <p class="author-title">Developer bạn</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-dots">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Liên hệ với tôi</h2>
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="section-line"></div>
+            </div>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Hãy kết nối cùng nhau!</h3>
-                    <p>Tôi luôn mở rộng tay đón nhận những cơ hội mới và dự án thú vị. Hãy liên hệ với tôi!</p>                    <div class="contact-items">                        <div class="contact-item" data-copy="hsmdc0065@tmt.edu.vn" title="Click để sao chép email">
-                            <i class="fas fa-envelope"></i>
-                            <span>hsmdc0065@tmt.edu.vn</span>
+                    <div class="terminal-box">
+                        <div class="terminal-header">
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-dot"></span>
+                            <span class="terminal-title">contact.sh</span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Việt Nam</span>
+                        <div class="terminal-body">
+                            <p class="terminal-line">
+                                <span class="terminal-prompt">$</span> 
+                                <span class="terminal-command">echo "Let's connect!"</span>
+                            </p>
+                            <p class="terminal-line">
+                                <span class="terminal-output">Let's connect!</span>
+                            </p>
+                            <p class="terminal-line">
+                                <span class="terminal-prompt">$</span> 
+                                <span class="terminal-command">cat contact.txt</span>
+                            </p>
+                            <div class="contact-items">
+                                <div class="contact-item" data-copy="hsmdc0065@tmt.edu.vn">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>hsmdc0065@tmt.edu.vn</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Việt Nam</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fab fa-github"></i>
+                                    <span>HUYVESEA0</span>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://github.com/HUYVESEA0" target="_blank" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="mailto:hsmdc0065@tmt.edu.vn" class="social-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <p class="terminal-line">
+                                <span class="terminal-prompt">$</span> 
+                                <span class="terminal-cursor">_</span>
+                            </p>
                         </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <span>HUYVESEA0</span>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/HUYVESEA0" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="mailto:hsmdc0065@tmt.edu.vn" class="social-link"><i class="fas fa-envelope"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
                     </div>
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Tên của bạn" required>
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Your name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Email của bạn" required>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="your.email@example.com" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Tiêu đề" required>
+                        <label>Subject</label>
+                        <input type="text" name="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tin nhắn của bạn" rows="5" required></textarea>
+                        <label>Message</label>
+                        <textarea name="message" rows="5" placeholder="Your message..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
             </div>
         </div>
-    </section>    <!-- Footer -->
-    <footer>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/HUYVESEA0" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:hsmdc0065@tmt.edu.vn" class="social-link">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/huyvesea0" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://facebook.com/huyvesea0" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-facebook"></i>
-                </a>
+            <div class="footer-content">
+                <p>&copy; 2025 HUYVESEA0. Made with <span class="heart">❤</span> and lots of <span class="coffee">☕</span></p>
+                <div class="footer-links">
+                    <a href="https://github.com/HUYVESEA0" target="_blank">GitHub</a>
+                    <span>|</span>
+                    <a href="mailto:hsmdc0065@tmt.edu.vn">Email</a>
+                </div>
             </div>
-            <p>&copy; 2025 HUYVESEA0 Portfolio. Made with ❤️ and lots of ☕</p>
         </div>
     </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
