@@ -869,6 +869,7 @@ section {
     text-decoration: none;
     transition: all var(--transition-normal);
     box-shadow: 0 0 20px var(--neon-cyan);
+<<<<<<< Current (Your changes)
 }
 
 .project-link:hover {
@@ -893,6 +894,50 @@ section {
     letter-spacing: 1px;
 }
 
+=======
+}
+
+.project-link:hover {
+    transform: scale(1.2) rotate(90deg);
+    box-shadow: 0 0 30px var(--neon-cyan);
+}
+
+.project-content {
+    padding: var(--spacing-lg);
+}
+
+.project-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid var(--neon-cyan);
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: var(--neon-cyan);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Active badge style */
+.project-badge.active {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: var(--neon-green);
+    color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+    }
+}
+
+>>>>>>> Incoming (Background Agent changes)
 .project-content h3 {
     font-family: var(--font-display);
     font-size: 1.5rem;
