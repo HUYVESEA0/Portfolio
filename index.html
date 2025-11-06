@@ -38,7 +38,7 @@
         "email": "hsmdc0065@tmt.edu.vn",
         "url": "https://huyvesea0.github.io/Portfolio",
         "sameAs": ["https://github.com/HUYVESEA0"],
-        "knowsAbout": ["HTML", "CSS", "JavaScript", "Git", "Web Development"]
+        "knowsAbout": ["HTML", "CSS", "JavaScript", "Git", "Web Development","C#","Python","API"]
     }
     </script>
 </head>
@@ -87,6 +87,9 @@
                 <li><a href="#skills" class="nav-link"><span class="nav-icon">_</span>SKILLS</a></li>
                 <li><a href="#projects" class="nav-link"><span class="nav-icon">_</span>PROJECTS</a></li>
                 <li><a href="#contact" class="nav-link"><span class="nav-icon">_</span>CONTACT</a></li>
+                <li class="nav-time" aria-label="Current time">
+                    <span id="current-time"></span>
+                </li>
                 <li>
                     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
@@ -125,7 +128,7 @@
                 <p class="hero-description">
                     <span class="code-tag">&lt;p&gt;</span>
                     Tôi là một developer đang bắt đầu hành trình học lập trình. 
-                    Hiện tại đang học HTML, CSS, JavaScript và Git. 
+                    Hiện tại đang học HTML, CSS, JavaScript, Git, C#, Python và API. 
                     Đam mê tạo ra những website hiện đại và luôn học hỏi những công nghệ mới.
                     <span class="code-tag">&lt;/p&gt;</span>
                 </p>
@@ -185,7 +188,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">01</span>
+                <span class="section-number">- 01 -</span>
                 <h2 class="section-title">About Me</h2>
                 <div class="section-line"></div>
             </div>
@@ -230,7 +233,7 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">02</span>
+                <span class="section-number">- 02 -</span>
                 <h2 class="section-title">Tech Stack</h2>
                 <div class="section-line"></div>
             </div>
@@ -285,18 +288,6 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3>React</h3>
-                    <div class="skill-level">
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="20"></div>
-                        </div>
-                        <span class="skill-percent">20%</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
                         <i class="fab fa-node-js"></i>
                     </div>
                     <h3>Node.js</h3>
@@ -307,6 +298,97 @@
                         <span class="skill-percent">15%</span>
                     </div>
                 </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="25"></div>
+                        </div>
+                        <span class="skill-percent">25%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon skill-icon-text">
+                        C#
+                    </div>
+                    <h3>C#</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="20"></div>
+                        </div>
+                        <span class="skill-percent">20%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="25"></div>
+                        </div>
+                        <span class="skill-percent">25%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>API</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="30"></div>
+                        </div>
+                        <span class="skill-percent">30%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3>Android</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="50"></div>
+                        </div>
+                        <span class="skill-percent">50%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQLServer</h3>
+                    <div class="skill-level">
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                        <span class="skill-percent">80%</span>
+                        <span class="skill-badge">ACTIVATE</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -315,7 +397,7 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-number">03</span>
+                <span class="section-number">- 03 -</span>
                 <h2 class="section-title">Projects</h2>
                 <div class="section-line"></div>
             </div>
@@ -340,6 +422,11 @@
                             <span>CSS3</span>
                             <span>JavaScript</span>
                             <span>Git</span>
+                            <span>C#</span>
+                            <span>API</span>
+                            <span>Android</span>
+                            <span>Java</span>
+                            <span>SQLServer</span>
                         </div>
                     </div>
                 </div>
